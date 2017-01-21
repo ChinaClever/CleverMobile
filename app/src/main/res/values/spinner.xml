@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dev_num_list">
+        <item>主机 </item>
+        <item>副机 1</item>
+        <item>副机 2</item>
+        <item>副机 3</item>
+        <item>副机 4</item>
+        <item>副机 5</item>
+        <item>副机 6</item>
+        <item>副机 7</item>
+        <item>副机 8</item>
+        <item>副机 9</item>
+    </string-array>
+</resources>

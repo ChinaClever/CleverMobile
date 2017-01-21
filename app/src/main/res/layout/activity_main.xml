@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clever.www.clevermobile.MainActivity">
+
+    <fragment
+        android:id="@+id/title_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:name="com.clever.www.clevermobile.titlebar.TitleCstFragment"/>
+
+    <RadioGroup
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_line"
+            style="@style/btmenu_item"
+            android:drawableTop="@drawable/btmenu_line"
+            android:text="@string/btmenu_line"/>
+        <RadioButton
+            android:id="@+id/rb_output"
+            style="@style/btmenu_item"
+            android:drawableTop="@drawable/btmenu_output"
+            android:text="@string/btmenu_output"/>
+        <RadioButton
+            android:id="@+id/rb_env"
+            style="@style/btmenu_item"
+            android:drawableTop="@drawable/btmenu_env"
+            android:text="@string/btmenu_env"/>
+        <RadioButton
+            android:id="@+id/rb_setting"
+            style="@style/btmenu_item"
+            android:drawableTop="@drawable/btmenu_setting"
+            android:text="@string/btmenu_setting"/>
+    </RadioGroup>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/bottom_bar"
+        android:background="@color/btmenu_div"/>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/div_tab_bar"
+        android:layout_below="@id/title_top_bar">
+    </FrameLayout>
+
+</RelativeLayout>
