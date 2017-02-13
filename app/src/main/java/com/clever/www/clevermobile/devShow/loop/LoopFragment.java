@@ -32,6 +32,7 @@ public class LoopFragment extends Fragment{
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         LoopAdapter adapter = new LoopAdapter(mLoopItemList);
+
         recyclerView.setAdapter(adapter);
 
         return view;
@@ -42,7 +43,7 @@ public class LoopFragment extends Fragment{
      */
     private void initLoop() {
         for(int i=0; i<6; ++i) {
-            mLoopItemList.add(new LoopItem(i+1));
+            mLoopItemList.add(new LoopItem(i));
         }
     }
 

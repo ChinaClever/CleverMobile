@@ -35,7 +35,7 @@ public class EnvUpdate {
         }
     }
 
-    void setDataUnit(PduDataUnit dataUnit, int base, double rate) {
+    private void setDataUnit(PduDataUnit dataUnit, int base, double rate) {
         for (int i=0; i<4; ++i) {
             EnvItem envItem = mEnvList.get(i+base);
             double value = dataUnit.value.get(i) / rate;
@@ -51,7 +51,7 @@ public class EnvUpdate {
         }
     }
 
-    void updateOther(PduDataBase dataBase, int len, int base) {
+    private void updateOther(PduDataBase dataBase, int len, int base) {
         for(int i=0; i<len; ++i) {
             int value = dataBase.get(i);
             EnvItem envItem = mEnvList.get(i+base);
@@ -59,14 +59,14 @@ public class EnvUpdate {
         }
     }
 
-    void initItem() {
+    private void initItem() {
         for(int i=0; i<mEnvList.size(); ++i) {
             EnvItem envItem = mEnvList.get(i);
             envItem.init();
         }
     }
 
-    void updateData() {
+    private void updateData() {
         if(mDataPacket != null) {
             if(mDataPacket.offLine > 0) {
                 PduEnvData envData = mDataPacket.data.env;

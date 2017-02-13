@@ -45,7 +45,6 @@
     <string name="line_save">保存</string>
     <string name="line_quit">退出</string>
 
-
     <string name="line_list_items">项目</string>
     <string name="line_list_sw">开关</string>
     <string name="line_list_open">开</string>
@@ -55,6 +54,13 @@
     <string name="line_list_pow">功率</string>
     <string name="line_list_ele">电能</string>
     <string name="line_list_pf">功素</string>
+
+    <string name="loop_list_name">回路</string>
+    <string name="loop_list_airsw">空开</string>
+    <string name="loop_list_cur">电流</string>
+    <string name="loop_list_pow">功率</string>
+    <string name="loop_list_open">开</string>
+    <string name="loop_list_close">关</string>
 
     <string name="env_tem">温度</string>
     <string name="env_hum">湿度</string>
