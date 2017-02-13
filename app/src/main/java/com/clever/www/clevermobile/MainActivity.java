@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import com.clever.www.clevermobile.devShow.env.EnvFragment;
 import com.clever.www.clevermobile.devShow.line.LineFragment;
 import com.clever.www.clevermobile.devShow.lineList.LineListFragment;
+import com.clever.www.clevermobile.devShow.loop.LoopFragment;
 import com.clever.www.clevermobile.devShow.output.OutputFragment;
 import com.clever.www.clevermobile.devShow.set.SetDevFragment;
 import com.clever.www.clevermobile.net.udp.recv.UdpSockList;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private UdpSockList mUdpSocket = new UdpSockList();
     private LineFragment mLine = null;
     private LineListFragment mLineList = null;
+    private LoopFragment mLoop = null;
     private EnvFragment mEnv = null;
     private OutputFragment mOutput = null;
     private SetDevFragment mSetDev = null;
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     private void btmenuChanged(int id) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         hideAllFragment(transaction);
@@ -69,11 +70,18 @@ public class MainActivity extends AppCompatActivity {
 //                }
 //                transaction.show(mLineList);
 
-                if(mLine == null){
-                    mLine = new LineFragment();
-                    transaction.add(R.id.content,mLine);
+//                if(mLine == null){
+//                    mLine = new LineFragment();
+//                    transaction.add(R.id.content,mLine);
+//                }
+//                transaction.show(mLine);
+
+                if(mLoop == null){
+                    mLoop = new LoopFragment();
+                    transaction.add(R.id.content,mLoop);
                 }
-                transaction.show(mLine);
+                transaction.show(mLoop);
+
                 break;
 
             case R.id.rb_output:
@@ -109,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
     private void hideAllFragment(FragmentTransaction fragmentTransaction){
         if(mLine != null) fragmentTransaction.hide(mLine);
         if(mLineList != null)fragmentTransaction.hide(mLineList);
+        if(mLoop != null)fragmentTransaction.hide(mLoop);
         if(mOutput != null)fragmentTransaction.hide(mOutput);
         if(mEnv != null)fragmentTransaction.hide(mEnv);
         if(mSetDev != null)fragmentTransaction.hide(mSetDev);

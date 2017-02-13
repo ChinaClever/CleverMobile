@@ -46,7 +46,6 @@ public class TitleCstFragment extends Fragment{
                 startActivity(intent);
             }
         });
-
     }
 
     private void updateView() {

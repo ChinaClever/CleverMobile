@@ -5,7 +5,8 @@ package com.clever.www.clevermobile.pdu.data.hash.slave;
  * 常量定义
  */
 public class PduHashConstants {
-    public static final int PDU_CMD_STATUS = 1; //设备状态
+    public static final int PDU_CMD_STATUS = 0; //设备状态
+    public static final int PDU_CMD_LOOP = 1; // 回路参数
     public static final int PDU_CMD_LINE = 2; // 相电参数
     public static final int PDU_CMD_OUTPUT = 3; // 输出位
     public static final int PDU_CMD_ENV = 4; // 环境数据

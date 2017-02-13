@@ -29,6 +29,7 @@ public class PduHashDataSlave {
                 dev.state = data.data.get(0);
                 break;
 
+            case PduHashConstants.PDU_CMD_LOOP: //回路参数
             case PduHashConstants.PDU_CMD_LINE: //设备相参数
             case PduHashConstants.PDU_CMD_OUTPUT: // 设备输出位
             case PduHashConstants.PDU_CMD_ENV: // 环境数据

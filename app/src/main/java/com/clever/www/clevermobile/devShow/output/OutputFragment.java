@@ -6,6 +6,7 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,7 @@ public class OutputFragment extends Fragment implements AdapterView.OnItemClickL
     private OutputUpdate mOutputUpdate=null;
     private int mBit = 0; // 弹出窗口用
     private OutputSetDlg mOutputSet=null;
+    private static final String TAG = "LZY";
 
     @Nullable
     @Override
@@ -68,6 +70,7 @@ public class OutputFragment extends Fragment implements AdapterView.OnItemClickL
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) { // 单击输出位
         if((mDataPacket == null) || (i==0))
             return;
+        Log.d(TAG, "onItemClick: " + l);
 
         Output output = mOutputList.get(--i);
         View dlgView = LayoutInflater.from(getActivity()).inflate(R.layout.output_dlg_view, null);

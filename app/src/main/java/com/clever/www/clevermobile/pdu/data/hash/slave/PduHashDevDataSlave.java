@@ -166,6 +166,10 @@ public class PduHashDevDataSlave {
                 objData(dev.line, data);
                 break;
 
+            case PduHashConstants.PDU_CMD_LOOP: //设备回路参数
+                objData(dev.loop, data);
+                break;
+
             case PduHashConstants.PDU_CMD_OUTPUT: // 设备输出位
                 objData(dev.output, data);
                 break;
