@@ -19,9 +19,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".devShow.loop.LoopDialog"
-            android:theme="@style/Theme.AppCompat.Dialog">
-        </activity>
     </application>
 
 </manifest>

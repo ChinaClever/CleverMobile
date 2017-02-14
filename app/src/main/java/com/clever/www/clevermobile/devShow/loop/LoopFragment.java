@@ -2,14 +2,14 @@ package com.clever.www.clevermobile.devShow.loop;
 
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.clever.www.clevermobile.R;
 import com.clever.www.clevermobile.login.LoginStatus;
@@ -22,7 +22,7 @@ import java.util.List;
  * Author: lzy. Created on: 17-2-10.
  */
 
-public class LoopFragment extends Fragment{
+public class LoopFragment extends Fragment implements AdapterView.OnItemClickListener {
     private List<LoopItem> mLoopItemList = new ArrayList<>();
     private PduDataPacket mDataPacket=null;
     private LoopUpdate mLoopUpdate = new LoopUpdate();
@@ -33,19 +33,27 @@ public class LoopFragment extends Fragment{
         View view = inflater.inflate(R.layout.loop_fragment,container, false);
 
         initLoop();
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        LoopAdapter adapter = new LoopAdapter(mLoopItemList);
+        LoopAdapter adapter = new LoopAdapter(getActivity(), R.layout.loop_item, mLoopItemList);
+        ListView listView = (ListView) view.findViewById(R.id.list_view);
+        View headView = inflater.inflate(R.layout.loop_view_header, null, false);
+        listView.addHeaderView(headView);
 
-        recyclerView.getLayoutManager().smoothScrollToPosition(recyclerView, null, adapter.getItemCount() - 1);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
 
-        recyclerView.setAdapter(adapter);
-        mLoopUpdate.setLoopData(adapter, mLoopItemList);
+//        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
+//        LoopViewAdapter adapter = new LoopViewAdapter(mLoopItemList);
+//
+//        recyclerView.getLayoutManager().smoothScrollToPosition(recyclerView, null, adapter.getItemCount() - 1);
+//
+//        recyclerView.setAdapter(adapter);
+//        mLoopUpdate.setLoopData(adapter, mLoopItemList);
         updatePacketThread();
 
-        Intent intent = new Intent(getActivity(), LoopDialog.class);
-        startActivity(intent);
+//        Intent intent = new Intent(getActivity(), LoopDialog.class);
+//        startActivity(intent);
 
         return view;
     }
@@ -78,5 +86,16 @@ public class LoopFragment extends Fragment{
                 }
             }
         }.start();
+    }
+
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        LoopItem loopItem = mLoopItemList.get(i);
+        Toast.makeText(view.getContext(), "luozhiyong", Toast.LENGTH_LONG).show();
+
+
+
+        //////  界面弹出，设定相关的值
     }
 }
