@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.clever.www.clevermobile.R;
 
@@ -41,6 +42,14 @@ public class LoopAdapter extends RecyclerView.Adapter<LoopAdapter.ViewHolder>{
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.loop_item,parent,false);
         ViewHolder holder = new ViewHolder(view);
+
+        holder.airSwTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "luozhiyong", Toast.LENGTH_LONG).show();
+            }
+        });
+
         return holder;
     }
 

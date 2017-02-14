@@ -2,6 +2,7 @@ package com.clever.www.clevermobile.devShow.loop;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.clever.www.clevermobile.R;
+import com.clever.www.clevermobile.login.LoginStatus;
+import com.clever.www.clevermobile.pdu.data.packages.PduDataPacket;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +24,8 @@ import java.util.List;
 
 public class LoopFragment extends Fragment{
     private List<LoopItem> mLoopItemList = new ArrayList<>();
+    private PduDataPacket mDataPacket=null;
+    private LoopUpdate mLoopUpdate = new LoopUpdate();
 
     @Nullable
     @Override
@@ -33,7 +38,14 @@ public class LoopFragment extends Fragment{
         recyclerView.setLayoutManager(layoutManager);
         LoopAdapter adapter = new LoopAdapter(mLoopItemList);
 
+        recyclerView.getLayoutManager().smoothScrollToPosition(recyclerView, null, adapter.getItemCount() - 1);
+
         recyclerView.setAdapter(adapter);
+        mLoopUpdate.setLoopData(adapter, mLoopItemList);
+        updatePacketThread();
+
+        Intent intent = new Intent(getActivity(), LoopDialog.class);
+        startActivity(intent);
 
         return view;
     }
@@ -47,5 +59,24 @@ public class LoopFragment extends Fragment{
         }
     }
 
+    private void updateDataPacket() {
+        mDataPacket = LoginStatus.getPacket();
+        mLoopUpdate.setDataPacket(mDataPacket);
+    }
 
+    private void updatePacketThread() {
+        new Thread() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        updateDataPacket();
+                        Thread.sleep(200);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }.start();
+    }
 }
