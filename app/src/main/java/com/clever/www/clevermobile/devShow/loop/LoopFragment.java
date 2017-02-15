@@ -1,7 +1,10 @@
 package com.clever.www.clevermobile.devShow.loop;
 
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.clever.www.clevermobile.R;
 import com.clever.www.clevermobile.login.LoginStatus;
@@ -41,19 +43,7 @@ public class LoopFragment extends Fragment implements AdapterView.OnItemClickLis
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
 
-//        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-//        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-//        recyclerView.setLayoutManager(layoutManager);
-//        LoopViewAdapter adapter = new LoopViewAdapter(mLoopItemList);
-//
-//        recyclerView.getLayoutManager().smoothScrollToPosition(recyclerView, null, adapter.getItemCount() - 1);
-//
-//        recyclerView.setAdapter(adapter);
-//        mLoopUpdate.setLoopData(adapter, mLoopItemList);
         updatePacketThread();
-
-//        Intent intent = new Intent(getActivity(), LoopDialog.class);
-//        startActivity(intent);
 
         return view;
     }
@@ -91,11 +81,34 @@ public class LoopFragment extends Fragment implements AdapterView.OnItemClickLis
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        LoopItem loopItem = mLoopItemList.get(i);
-        Toast.makeText(view.getContext(), "luozhiyong", Toast.LENGTH_LONG).show();
+        LoopItem loopItem = mLoopItemList.get(--i);
+
+        String title = loopItem.getName() + getResources().getString(R.string.loop_list_name);
+
+        View dlgView =  LayoutInflater.from(getActivity()).inflate(R.layout.loop_dlg_view, null);
+        Dialog dialog = new AlertDialog.Builder(getActivity())
+                .setTitle(title)
+                .setView(dlgView)
+                .setPositiveButton(R.string.loop_dlg_threshold, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                }).setNeutralButton(R.string.loop_dlg_sw, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                }).create();
+        dialog.show();
 
 
 
-        //////  界面弹出，设定相关的值
     }
 }

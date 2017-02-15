@@ -15,7 +15,7 @@ import java.util.List;
 public class LoopUpdate {
     private PduDataPacket mDataPacket=null;
     private List<LoopItem> mLoopItemList=null;
-    private LoopViewAdapter mAdapter=null;
+    private LoopAdapter mAdapter=null;
     private boolean isRun = false;
 
     public LoopUpdate() {
@@ -27,7 +27,7 @@ public class LoopUpdate {
      * @param adapter
      * @param list
      */
-    public void setLoopData(LoopViewAdapter adapter, List<LoopItem> list) {
+    public void setLoopData(LoopAdapter adapter, List<LoopItem> list) {
         mAdapter = adapter;
         mLoopItemList = list;
     }

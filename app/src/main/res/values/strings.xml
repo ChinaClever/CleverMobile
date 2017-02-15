@@ -61,6 +61,17 @@
     <string name="loop_list_pow">功率</string>
     <string name="loop_list_open">开</string>
     <string name="loop_list_close">关</string>
+    <string name="loop_airsw">空开：</string>
+    <string name="loop_cur">电流：</string>
+    <string name="loop_pow">功率：</string>
+    <string name="loop_ele">电能：</string>
+    <string name="loop_min">最大值</string>
+    <string name="loop_max">最小值</string>
+    <string name="loop_crMin">临界下限</string>
+    <string name="loop_crMax">临界上限</string>
+    <string name="loop_dlg_threshold">阈值设置</string>
+    <string name="loop_dlg_sw">开关设置</string>
+    <string name="loop_dlg_quit">退出</string>
 
     <string name="env_tem">温度</string>
     <string name="env_hum">湿度</string>
