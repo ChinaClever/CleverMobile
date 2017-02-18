@@ -22,8 +22,8 @@ public class LineFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.line_fragment, container, false);
-        mDis = (LineCstDisplay) view.findViewById(R.id.dis);
-        updatePacketThread();
+//        mDis = (LineCstDisplay) view.findViewById(R.id.dis);
+//        updatePacketThread();
         return view;
     }
 

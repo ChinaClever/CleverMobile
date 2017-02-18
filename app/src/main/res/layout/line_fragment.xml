@@ -3,10 +3,26 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.clever.www.clevermobile.devShow.line.LineCstDisplay
-        android:id="@+id/dis"
+    <!--<com.clever.www.clevermobile.devShow.line.LineCstDisplay-->
+        <!--android:id="@+id/dis"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+    <!--</com.clever.www.clevermobile.devShow.line.LineCstDisplay>-->
+
+
+    <fragment
+        android:id="@+id/line"
+        android:name="com.clever.www.clevermobile.devShow.lineList.LineListFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </com.clever.www.clevermobile.devShow.line.LineCstDisplay>
+        android:layout_height="wrap_content"/>
+
+    <fragment
+        android:id="@+id/loop"
+        android:name="com.clever.www.clevermobile.devShow.loop.LoopFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
 
 </LinearLayout>

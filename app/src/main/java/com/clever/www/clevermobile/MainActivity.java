@@ -70,17 +70,17 @@ public class MainActivity extends AppCompatActivity {
 //                }
 //                transaction.show(mLineList);
 
-//                if(mLine == null){
-//                    mLine = new LineFragment();
-//                    transaction.add(R.id.content,mLine);
-//                }
-//                transaction.show(mLine);
-
-                if(mLoop == null){
-                    mLoop = new LoopFragment();
-                    transaction.add(R.id.content,mLoop);
+                if(mLine == null){
+                    mLine = new LineFragment();
+                    transaction.add(R.id.content,mLine);
                 }
-                transaction.show(mLoop);
+                transaction.show(mLine);
+
+//                if(mLoop == null){
+//                    mLoop = new LoopFragment();
+//                    transaction.add(R.id.content,mLoop);
+//                }
+//                transaction.show(mLoop);
 
                 break;
 

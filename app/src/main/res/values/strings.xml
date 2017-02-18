@@ -44,6 +44,7 @@
     <string name="line_ret_min">最小值大于最大值</string>
     <string name="line_save">保存</string>
     <string name="line_quit">退出</string>
+    <string name="line_ok">确定</string>
 
     <string name="line_list_items">项目</string>
     <string name="line_list_sw">开关</string>
@@ -54,6 +55,7 @@
     <string name="line_list_pow">功率</string>
     <string name="line_list_ele">电能</string>
     <string name="line_list_pf">功素</string>
+    <string name="line_dlg_title">请选择需要设置的相</string>
 
     <string name="loop_list_name">回路</string>
     <string name="loop_list_airsw">空开</string>
@@ -65,13 +67,23 @@
     <string name="loop_cur">电流：</string>
     <string name="loop_pow">功率：</string>
     <string name="loop_ele">电能：</string>
-    <string name="loop_min">最大值</string>
-    <string name="loop_max">最小值</string>
+    <string name="loop_min">最小值</string>
+    <string name="loop_max">最大值</string>
     <string name="loop_crMin">临界下限</string>
     <string name="loop_crMax">临界上限</string>
     <string name="loop_dlg_threshold">阈值设置</string>
     <string name="loop_dlg_sw">开关设置</string>
     <string name="loop_dlg_quit">退出</string>
+    <string name="loop_name">回路：</string>
+    <string name="loop_unified">统一设置</string>
+    <string name="loop_whole">全局设置</string>
+    <string name="loop_save">保存</string>
+
+    <string name="loop_ret_max">最大值大于16A</string>
+    <string name="loop_ret_min">最小值大于最大值</string>
+    <string name="loop_ret_crMin">临界下限小于最小值</string>
+    <string name="loop_ret_crMax">临界上限大于最大值</string>
+
 
     <string name="env_tem">温度</string>
     <string name="env_hum">湿度</string>
@@ -100,8 +112,8 @@
     <string name="output_pow">输出功率</string>
     <string name="output_ele">输出电能</string>
     <string name="output_pf">功率因素</string>
-    <string name="output_min">最大值</string>
-    <string name="output_max">最小值</string>
+    <string name="output_min">最小值</string>
+    <string name="output_max">最大值</string>
     <string name="output_crMin">临界下限</string>
     <string name="output_crMax">临界上限</string>
     <string name="output_cr">临界状态</string>

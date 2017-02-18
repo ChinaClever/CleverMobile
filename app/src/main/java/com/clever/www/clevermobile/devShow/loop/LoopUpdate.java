@@ -51,8 +51,7 @@ public class LoopUpdate {
         }
     }
 
-    private void setObjData(PduObjData objData)
-    {
+    private void setObjData(PduObjData objData) {
         double powRate = RateEnum.POW.getValue();
         double curRate = RateEnum.CUR.getValue();
 
@@ -99,4 +98,20 @@ public class LoopUpdate {
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

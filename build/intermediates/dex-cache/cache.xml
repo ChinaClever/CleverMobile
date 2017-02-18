@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="5bfcd5a1d79a637d91c084b0a3df5de09bf97536">
+        sha1="fbb85af122573bd5adac3200e2e903a3c6e485cb">
         <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/instant-run_4ffe6d830538b19336215962b6d1ce6d20567a6c.jar" />
     </item>
     <item
@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="a33572a0a51b49ad988b4a6d1a794f7769e36973">
+        sha1="90c594b6a830c2ea328c8d04fbf07387aef7bca0">
         <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_4ba879354716e81cb71f3fdebc06f6332940537a.jar" />
     </item>
 
