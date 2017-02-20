@@ -18,6 +18,7 @@ public class PduDevSpied {
     private PduHashData mHashData = PduHashTable.getHash();
     public int devNum=0, devLine=0, devOff=0, devAlarm=0;
     private static PduDevSpied mDevSpid = null;
+    private static final String TAG = "LZY";
 
     public static PduDevSpied get() {
         if(mDevSpid == null)
@@ -48,7 +49,8 @@ public class PduDevSpied {
                     PduDataPacket packet = hash.get(listDev.get(k));
                     if(packet.offLine > 0)
                     {
-                        if(--packet.offLine > 0)
+                        packet.offLine--;
+                        if(packet.offLine > 0)
                         {
                             lineNum++; // 在线设备数量加一
                             if(packet.state > 0) { // 设备不正常
@@ -79,11 +81,14 @@ public class PduDevSpied {
         new Thread() {
             @Override
             public void run() {
-                try {
-                    Thread.sleep(1000);
-                    checkDevState();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                while (true) {
+                    try {
+
+                        Thread.sleep(1000);
+                        checkDevState();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }.start();

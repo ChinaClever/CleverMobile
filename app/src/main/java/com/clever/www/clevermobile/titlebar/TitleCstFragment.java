@@ -51,8 +51,10 @@ public class TitleCstFragment extends Fragment{
     private void updateView() {
         if(LoginStatus.getLogin()) {
             titleTv.setText(LoginStatus.login_ip);
+            loginBtn.setText(R.string.login_coned);
         } else {
             titleTv.setText(R.string.no_login);
+            loginBtn.setText(R.string.login_please);
         }
     }
 

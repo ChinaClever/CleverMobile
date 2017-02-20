@@ -16,6 +16,7 @@ public class LineListUpdate {
     private PduDataPacket mDataPacket=null;
     private List<LineListItem> mLineList=null;
     private boolean isRun = false;
+    private static final String TAG = "LZY";
 
     public LineListUpdate() {
         new Timers().start(500);
@@ -27,10 +28,14 @@ public class LineListUpdate {
     }
 
     public void setDataPacket(PduDataPacket data) {
-        if(!isRun) {
-            isRun = true;
-            mDataPacket = data;
-            isRun = false;
+        if(data != null) {
+            if (!isRun) {
+                isRun = true;
+                mDataPacket = data;
+                isRun = false;
+            }
+        } else {
+            initItemList();
         }
     }
 

@@ -57,6 +57,7 @@ public class LineListItem {
 
     public void clearData() {
         for(int i=0; i<LINE_NUM; ++i) {
+            swList.set(i, true);
             valueList.set(i, (double) -1);
             alarmList.set(i, false);
             crAlarmList.set(i, false);

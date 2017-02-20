@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initNet() {
-//        mDevSpied.get().startThread();
+        mDevSpied.get().startThread();
 //        UdpSend udp = new UdpSend();
 //        String str = "luozhiyong";
 //        udp.dbSent(8080, str.getBytes(), str.length());

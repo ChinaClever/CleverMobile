@@ -187,7 +187,7 @@ public class LoginFragment  extends Fragment{
     private void disConnect(Button btn) {
         TcpLogin login = new TcpLogin();
         login.disConnect();
-        Toast.makeText(getActivity(), R.string.login_err, Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), R.string.login_quited, Toast.LENGTH_LONG).show();
 
         btn.setEnabled(false);
         LoginStatus.isLogin = false;

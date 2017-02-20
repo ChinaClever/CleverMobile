@@ -3,15 +3,6 @@
 
     <item
         is-multidex="false"
-        jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_53fda7af1d387626e688ce7cb63e6a8bd46f9d17.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -66,6 +57,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_53fda7af1d387626e688ce7cb63e6a8bd46f9d17.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -93,21 +93,21 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="de29f34f9632036ca531ed004120ba49a4fde93e">
+        <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_4ba879354716e81cb71f3fdebc06f6332940537a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.0_6ed84a6298c2d5772a6f7756ec95d2d2d05f9c43.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="1190eee66129640d498bcc747489ea55783e4a63">
-        <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_4ba879354716e81cb71f3fdebc06f6332940537a.jar" />
     </item>
 
 </items>
