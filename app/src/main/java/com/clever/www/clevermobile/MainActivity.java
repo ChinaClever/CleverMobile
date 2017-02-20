@@ -101,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.rb_setting:
-               if(mSetDev == null) {
-                   mSetDev = new SetDevFragment();
-                   transaction.add(R.id.content,mSetDev);
-               }
+                if(mSetDev == null) {
+                    mSetDev = new SetDevFragment();
+                    transaction.add(R.id.content,mSetDev);
+                }
                 transaction.show(mSetDev);
                 break;
         }
