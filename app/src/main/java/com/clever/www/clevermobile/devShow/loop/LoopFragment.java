@@ -56,7 +56,7 @@ public class LoopFragment extends Fragment implements AdapterView.OnItemClickLis
      * 初始化回路界面
      */
     private void initLoop() {
-        for(int i=0; i<16; ++i) {
+        for(int i=0; i<6; ++i) {
             mLoopItemList.add(new LoopItem(i));
         }
     }
@@ -111,6 +111,29 @@ public class LoopFragment extends Fragment implements AdapterView.OnItemClickLis
         dialog.show();
     }
 
+    private void setSwDlg(int loopId) {
+        String title =  "C" + (loopId+1) + getResources().getString(R.string.loop_dlg_sw);
+        View dlgView = LayoutInflater.from(getActivity()).inflate(R.layout.loop_sw_view, null);
+        final LoopSwSet loopSwSet = (LoopSwSet) dlgView.findViewById(R.id.swdlg);
+        loopSwSet.setLoopId(loopId+1);
+
+        Dialog dialog = new AlertDialog.Builder(getActivity())
+                .setTitle(title)
+                .setView(dlgView)
+                .setPositiveButton(R.string.loop_sure, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        loopSwSet.setSwitch();
+                    }
+                }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).create();
+        dialog.show();
+    }
+
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -135,7 +158,7 @@ public class LoopFragment extends Fragment implements AdapterView.OnItemClickLis
                 }).setNeutralButton(R.string.loop_dlg_sw, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                        setSwDlg(finalLoopId);
                     }
                 }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
                     @Override

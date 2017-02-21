@@ -33,7 +33,7 @@ public class LoopUpdate {
     }
 
     public void setDataPacket(PduDataPacket data) {
-        if(!isRun) {
+        if (!isRun) {
             isRun = true;
             mDataPacket = data;
             isRun = false;

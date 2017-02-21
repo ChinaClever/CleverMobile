@@ -6,6 +6,8 @@ import com.clever.www.clevermobile.pdu.data.packages.PduDataPacket;
 
 import java.util.List;
 
+import static com.clever.www.clevermobile.R.id.sw;
+
 /**
  * Author: lzy. Created on: 16-10-11.
  * 输出位更新类
@@ -73,10 +75,7 @@ public class OutputUpdate {
      */
     private void setOutputSw() {
         for(int i = 0; i<mOutputList.size(); ++i) {
-            boolean sw = true;
-            int ret= mDataPacket.data.output.sw.get(i);
-            if(ret == 0) // 0才是关
-                sw = false;
+            int sw= mDataPacket.data.output.sw.get(i);
             mOutputList.get(i).setSw(sw);
         }
     }

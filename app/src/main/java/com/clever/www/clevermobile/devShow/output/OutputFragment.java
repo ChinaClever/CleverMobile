@@ -66,6 +66,29 @@ public class OutputFragment extends Fragment implements AdapterView.OnItemClickL
             mOutputList.add(new Output(i)); /////=======  调试用，
     }
 
+    private void setSwDlg() {
+
+        String title =  mOutputList.get(mBit).getName() + getResources().getString(R.string.output_dlg_sw);
+        View dlgView = LayoutInflater.from(getActivity()).inflate(R.layout.output_sw_view, null);
+        final OutputSwSet outputSwSet = (OutputSwSet) dlgView.findViewById(R.id.swdlg);
+
+        Dialog dialog = new AlertDialog.Builder(getActivity())
+                .setTitle(title)
+                .setView(dlgView)
+                .setPositiveButton(R.string.output_dlg_sure, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        outputSwSet.setSwitch(mBit+1);
+                    }
+                }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).create();
+        dialog.show();
+    }
+
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) { // 单击输出位
         if((mDataPacket == null) || (i==0))
@@ -81,14 +104,17 @@ public class OutputFragment extends Fragment implements AdapterView.OnItemClickL
         Dialog dialog = new AlertDialog.Builder(getActivity())
                 .setTitle("输出位信息")
                 .setView(dlgView)
-                .setPositiveButton(R.string.output_dlg_details,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                setDialog();
-                            }
-                        })
-                .setNegativeButton(R.string.output_dlg_quit, new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.output_dlg_threshold, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        setDialog();
+                    }
+                }).setNeutralButton(R.string.output_dlg_sw, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        setSwDlg();
+                    }
+                }).setNegativeButton(R.string.output_dlg_quit, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 

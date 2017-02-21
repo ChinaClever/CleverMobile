@@ -7,7 +7,7 @@ package com.clever.www.clevermobile.devShow.output;
 public class Output {
     private int mId=0; // 输出位编号
     private String mName; // 输出位名称
-    private boolean mSw = true; // 开关状态
+    private int mSw = -1; // 开关状态
     private double mCur = -1, mPow = -1; // 输出电流、功率
     private boolean mCurAlarm = false, mCrAlarm = false; // 电流报警状态、临界报警
 
@@ -24,8 +24,8 @@ public class Output {
         mName = name;
     }
 
-    public boolean getSw() { return mSw; }
-    public void setSw(boolean sw) { mSw = sw; }
+    public int getSw() { return mSw; }
+    public void setSw(int sw) { mSw = sw; }
 
     public double getCur() { return mCur; }
     public void setCur(double cur) { mCur = cur; }
@@ -39,7 +39,7 @@ public class Output {
     public void setCrAlarm(boolean alarm) { mCrAlarm = alarm; }
 
     public void initData() {
-        mCur =  mPow = -1;
+        mCur =  mPow = mSw = -1;
         mCurAlarm =  mCrAlarm = false;
     }
 }

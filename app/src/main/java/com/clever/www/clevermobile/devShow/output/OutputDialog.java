@@ -64,8 +64,8 @@ public class OutputDialog extends LinearLayout{
         }
 
         TextView swTv = (TextView) findViewById(R.id.sw);
-        boolean sw = mOutput.getSw();
-        if(sw)
+        int sw = mOutput.getSw();
+        if(sw > 0)
             swTv.setText(R.string.output_open);
         else
             swTv.setText(R.string.output_close);

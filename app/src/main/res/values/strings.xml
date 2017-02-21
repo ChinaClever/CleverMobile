@@ -83,12 +83,14 @@
     <string name="loop_unified">统一设置</string>
     <string name="loop_whole">全局设置</string>
     <string name="loop_save">保存</string>
+    <string name="loop_open">开</string>
+    <string name="loop_close">关</string>
+    <string name="loop_sure">确定</string>
 
     <string name="loop_ret_max">最大值大于16A</string>
     <string name="loop_ret_min">最小值大于最大值</string>
     <string name="loop_ret_crMin">临界下限小于最小值</string>
     <string name="loop_ret_crMax">临界上限大于最大值</string>
-
 
     <string name="env_tem">温度</string>
     <string name="env_hum">湿度</string>
@@ -136,9 +138,12 @@
     <string name="output_ret_crMin">临界下限小于最小值</string>
     <string name="output_ret_crMax">临界上限大于最大值</string>
 
+    <string name="output_dlg_sw">开关设置</string>
+    <string name="output_dlg_threshold">阈值设置</string>
     <string name="output_dlg_details">查看详情</string>
     <string name="output_dlg_quit">退出</string>
     <string name="output_dlg_save">保存</string>
+    <string name="output_dlg_sure">确定</string>
 
     <string name="status_OK">正常</string>
     <string name="status_line">在线</string>

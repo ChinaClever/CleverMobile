@@ -59,6 +59,10 @@ public class OutputSetDlg extends LinearLayout{
         if(name == null)
             name = "Output" + (mLine+1);
         tv.setText(name);
+
+        tv = (TextView) findViewById(R.id.num);
+        String str = " " +  (mLine+1);
+        tv.setText(str);
     }
 
     private void setCurTestView(double cur, TextView view) {
@@ -308,7 +312,6 @@ public class OutputSetDlg extends LinearLayout{
                 saveThreshold();
             }
         }
-
         return str;
     }
 

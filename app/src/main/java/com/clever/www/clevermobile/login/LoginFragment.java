@@ -189,10 +189,13 @@ public class LoginFragment  extends Fragment{
         login.disConnect();
         Toast.makeText(getActivity(), R.string.login_quited, Toast.LENGTH_LONG).show();
 
+        LoginStatus.getPacket().offLine = 0; // 设置为离线
         btn.setEnabled(false);
         LoginStatus.isLogin = false;
         btn = (Button) mView.findViewById(R.id.longin);
         btn.setEnabled(true);
+
+
     }
 
     /**

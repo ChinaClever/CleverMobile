@@ -29,19 +29,25 @@ public class OutputAdapter extends ArrayAdapter<Output> {
 
     protected void setView(View view, Output output) {
         String str = null;
-        TextView id = (TextView) view.findViewById(R.id.id); // 输出位编号
-        str = (output.getId()+1) +"";
-        id.setText(str);
+//        TextView id = (TextView) view.findViewById(R.id.id); // 输出位编号
+//        str = (output.getId()+1) +"";
+//        id.setText(str);
 
         TextView name = (TextView) view.findViewById(R.id.name); // 输出位名称
         name.setText(output.getName());
 
         TextView swTv = (TextView) view.findViewById(R.id.sw); // 开关状态
-        boolean sw = output.getSw();
-        if(sw)
-            swTv.setText(R.string.output_open);
-        else
+        int sw = output.getSw();
+        if(sw<0) {
+            swTv.setText("---");
+            swTv.setTextColor(Color.BLACK);
+        } else if(sw == 0){
             swTv.setText(R.string.output_close);
+            swTv.setTextColor(Color.RED);
+        } else {
+            swTv.setText(R.string.output_open);
+            swTv.setTextColor(Color.GREEN);
+        }
 
         TextView curTv = (TextView) view.findViewById(R.id.cur);
         double cur = output.getCur();
@@ -52,8 +58,10 @@ public class OutputAdapter extends ArrayAdapter<Output> {
         curTv.setText(str);
         boolean curAlarm = output.getCurAlarm();
         boolean crAlarm = output.getCrAlarm();
-        if(curAlarm || crAlarm)
-            curTv.setTextColor(Color.rgb(255, 0, 0));
+        if(crAlarm)
+            curTv.setTextColor(Color.YELLOW);
+        if(curAlarm)
+            curTv.setTextColor(Color.RED);
         else
             curTv.setTextColor(Color.rgb(0, 0, 0));
 
@@ -65,11 +73,11 @@ public class OutputAdapter extends ArrayAdapter<Output> {
             str = "---";
         powTv.setText(str);
 
-        TextView crTv = (TextView) view.findViewById(R.id.cr);
-        if(crAlarm)
-            crTv.setText(R.string.output_cr_alarm);
-        else
-            crTv.setText(R.string.output_cr_ok);
+//        TextView crTv = (TextView) view.findViewById(R.id.cr);
+//        if(crAlarm)
+//            crTv.setText(R.string.output_cr_alarm);
+//        else
+//            crTv.setText(R.string.output_cr_ok);
     }
 
     @Override

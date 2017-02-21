@@ -28,14 +28,10 @@ public class LineListUpdate {
     }
 
     public void setDataPacket(PduDataPacket data) {
-        if(data != null) {
-            if (!isRun) {
-                isRun = true;
-                mDataPacket = data;
-                isRun = false;
-            }
-        } else {
-            initItemList();
+        if (!isRun) {
+            isRun = true;
+            mDataPacket = data;
+            isRun = false;
         }
     }
 
