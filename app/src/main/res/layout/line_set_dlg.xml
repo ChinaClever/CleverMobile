@@ -17,6 +17,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="---"/>
+        <TextView
+            android:id="@+id/sig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"/>
     </LinearLayout>
 
     <LinearLayout
@@ -36,6 +41,11 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:text="---"/>
+            <TextView
+                android:id="@+id/minsig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"/>
         </LinearLayout>
 
         <LinearLayout
@@ -52,6 +62,11 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:text="---"/>
+            <TextView
+                android:id="@+id/maxsig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"/>
         </LinearLayout>
     </LinearLayout>
 

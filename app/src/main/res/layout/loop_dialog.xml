@@ -57,6 +57,12 @@
             android:text="---"/>
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/title_div_white"/>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -75,9 +81,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/loop_max" />
+            android:text="@string/loop_crMin"/>
         <TextView
-            android:id="@+id/max"
+            android:id="@+id/crMin"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -91,13 +97,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/loop_crMin"/>
+            android:text="@string/loop_max" />
         <TextView
-            android:id="@+id/crMin"
+            android:id="@+id/max"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="---"/>
+
 
         <TextView
             android:layout_width="wrap_content"

@@ -112,60 +112,64 @@ public class LoopFragment extends Fragment implements AdapterView.OnItemClickLis
     }
 
     private void setSwDlg(int loopId) {
-        String title =  "C" + (loopId+1) + getResources().getString(R.string.loop_dlg_sw);
-        View dlgView = LayoutInflater.from(getActivity()).inflate(R.layout.loop_sw_view, null);
-        final LoopSwSet loopSwSet = (LoopSwSet) dlgView.findViewById(R.id.swdlg);
-        loopSwSet.setLoopId(loopId+1);
 
-        Dialog dialog = new AlertDialog.Builder(getActivity())
-                .setTitle(title)
-                .setView(dlgView)
-                .setPositiveButton(R.string.loop_sure, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        loopSwSet.setSwitch();
-                    }
-                }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+            String title = "C" + (loopId + 1) + getResources().getString(R.string.loop_dlg_sw);
+            View dlgView = LayoutInflater.from(getActivity()).inflate(R.layout.loop_sw_view, null);
+            final LoopSwSet loopSwSet = (LoopSwSet) dlgView.findViewById(R.id.swdlg);
+            loopSwSet.setLoopId(loopId + 1);
 
-                    }
-                }).create();
-        dialog.show();
+            Dialog dialog = new AlertDialog.Builder(getActivity())
+                    .setTitle(title)
+                    .setView(dlgView)
+                    .setPositiveButton(R.string.loop_sure, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            loopSwSet.setSwitch();
+                        }
+                    }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    }).create();
+            dialog.show();
+
     }
 
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        int loopId=0;
-        if(i>0)  loopId = i; else return;
-        LoopItem loopItem = mLoopItemList.get(--loopId);
+        if (mDataPacket != null) if (mDataPacket.offLine > 0) {
+            int loopId=0;
+            if(i>0)  loopId = i; else return;
+            LoopItem loopItem = mLoopItemList.get(--loopId);
 
-        String title = loopItem.getName() + getResources().getString(R.string.loop_list_name);
-        View dlgView =  LayoutInflater.from(getActivity()).inflate(R.layout.loop_dlg_view, null);
-        LoopDialog loopDialog = (LoopDialog) dlgView.findViewById(R.id.dlg);
-        loopDialog.setData(mDataPacket, loopId);
+            String title = loopItem.getName() + getResources().getString(R.string.loop_list_name);
+            View dlgView =  LayoutInflater.from(getActivity()).inflate(R.layout.loop_dlg_view, null);
+            LoopDialog loopDialog = (LoopDialog) dlgView.findViewById(R.id.dlg);
+            loopDialog.setData(mDataPacket, loopId);
 
-        final int finalLoopId = loopId;
-        Dialog dialog = new AlertDialog.Builder(getActivity())
-                .setTitle(title)
-                .setView(dlgView)
-                .setPositiveButton(R.string.loop_dlg_threshold, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        setThresholdDlg(finalLoopId);
-                    }
-                }).setNeutralButton(R.string.loop_dlg_sw, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        setSwDlg(finalLoopId);
-                    }
-                }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+            final int finalLoopId = loopId;
+            Dialog dialog = new AlertDialog.Builder(getActivity())
+                    .setTitle(title)
+                    .setView(dlgView)
+                    .setPositiveButton(R.string.loop_dlg_threshold, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            setThresholdDlg(finalLoopId);
+                        }
+                    }).setNeutralButton(R.string.loop_dlg_sw, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            setSwDlg(finalLoopId);
+                        }
+                    }).setNegativeButton(R.string.loop_dlg_quit, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
 
-                    }
-                }).create();
-        dialog.show();
+                        }
+                    }).create();
+            dialog.show();
+        }
     }
 }

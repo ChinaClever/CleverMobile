@@ -58,7 +58,7 @@ public class LoopItem {
     }
 
     public void init() {
-        cur = pow = -1;
+        cur = pow = airSw = -1;
         alarm = crAlarm = -1;
     }
 }

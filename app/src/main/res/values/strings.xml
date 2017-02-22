@@ -7,10 +7,10 @@
     <string name="login_OK">登陆成功</string>
     <string name="login_err">登陆失败</string>
     <string name="login_quited">已退出登陆</string>
-    <string name="login_dev_ip">IP地址</string>
+    <string name="login_dev_ip">IP地址:</string>
     <string name="login_dev_num">级联号</string>
-    <string name="login_name">账号</string>
-    <string name="login_pwd">密码</string>
+    <string name="login_name">账  号：</string>
+    <string name="login_pwd">密  码：</string>
     <string name="login_remember">记住账号/密码</string>
     <string name="login_select">设备选择</string>
     <string name="login_login">连接</string>
@@ -30,7 +30,7 @@
     <string name="btmenu_env">传感器</string>
     <string name="btmenu_setting">设置</string>
 
-    <string name="line_dev_text"> | 设备相状态</string>
+    <string name="line_dev_text">  设备相状态</string>
     <string name="line_item">项目</string>
     <string name="line_dsplay">显示</string>
     <string name="line_vol">电压</string>
@@ -38,8 +38,8 @@
     <string name="line_pow">功率</string>
     <string name="line_ele">电能</string>
     <string name="line_pf">功素</string>
-    <string name="line_min">最大值</string>
-    <string name="line_max">最小值</string>
+    <string name="line_min">最小值:</string>
+    <string name="line_max">最大值:</string>
     <string name="line_crMin">临界下限</string>
     <string name="line_crMax">临界上限</string>
     <string name="line_unified">统一设置</string>
@@ -49,6 +49,8 @@
     <string name="line_save">保存</string>
     <string name="line_quit">退出</string>
     <string name="line_ok">确定</string>
+    <string name="line_dlg_vol">电  压</string>
+    <string name="line_dlg_cur">电  流</string>
 
     <string name="line_list_items">项目</string>
     <string name="line_list_sw">开关</string>
@@ -61,7 +63,7 @@
     <string name="line_list_pf">功素</string>
     <string name="line_dlg_title">请选择需要设置的相</string>
 
-    <string name="loop_dev_text"> | 设备回路状态</string>
+    <string name="loop_dev_text">  设备回路状态</string>
     <string name="loop_list_name">回路</string>
     <string name="loop_list_airsw">空开</string>
     <string name="loop_list_cur">电流</string>
@@ -165,6 +167,5 @@
     <string name="set_save">保存</string>
     <string name="set_save_ok">保存成功</string>
     <string name="set_err_connect">保存错误</string>
-
 
 </resources>

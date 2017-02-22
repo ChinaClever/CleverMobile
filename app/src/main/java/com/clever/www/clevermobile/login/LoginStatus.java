@@ -17,9 +17,10 @@ public class LoginStatus {
 
     private static PduHashRead mReadHash = new PduHashRead();
     public static PduDataPacket getPacket() {
-        PduDataPacket dataPacket = null;
-        if(isLogin) {
-            dataPacket = mReadHash.getPacket(login_ip, login_devNum);
+        PduDataPacket dataPacket = mReadHash.getPacket(login_ip, login_devNum);;
+        if(!isLogin) {
+            if(dataPacket != null)
+                dataPacket.offLine = 0;
         }
         return dataPacket;
     }

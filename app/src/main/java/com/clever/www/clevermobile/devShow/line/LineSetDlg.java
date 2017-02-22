@@ -8,7 +8,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.clever.www.clevermobile.R;
 import com.clever.www.clevermobile.common.timer.HanderTimer;
@@ -45,7 +44,16 @@ public class LineSetDlg extends LinearLayout{
         mRate = rate;
 
         TextView tv = (TextView) findViewById(R.id.title);
-        tv.setText(title);
+        tv.setText(title + "：");
+
+        tv = (TextView) findViewById(R.id.sig);
+        tv.setText(mSymbol);
+
+        tv = (TextView) findViewById(R.id.minsig);
+        tv.setText(mSymbol);
+
+        tv = (TextView) findViewById(R.id.maxsig);
+        tv.setText(mSymbol);
 
         if(mDataUnit !=null) {
             updateValue();
@@ -56,7 +64,7 @@ public class LineSetDlg extends LinearLayout{
     private void setView(TextView tv, int value) {
         String str = "---";
         if(value >= 0)
-            str = value/mRate + mSymbol;
+            str = value/mRate +"";
         tv.setText(str);
     }
 
@@ -202,14 +210,16 @@ public class LineSetDlg extends LinearLayout{
         return checkData(min, max);
     }
 
-    public void saveData() {
+    public String saveData() {
+        String str = "";
         if(mDataUnit != null) {
-            String str = checkThreshold();
+            str = checkThreshold();
             if (!str.isEmpty()) {
                 saveThreshold();
-            } else {
-                Toast.makeText(context, str, Toast.LENGTH_LONG).show();
+//            } else {
+//
             }
         }
+        return str;
     }
 }
