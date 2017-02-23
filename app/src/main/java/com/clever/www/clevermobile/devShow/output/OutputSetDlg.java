@@ -60,15 +60,15 @@ public class OutputSetDlg extends LinearLayout{
             name = "Output" + (mLine+1);
         tv.setText(name);
 
-        tv = (TextView) findViewById(R.id.num);
-        String str = " " +  (mLine+1);
-        tv.setText(str);
+//        tv = (TextView) findViewById(R.id.num);
+//        String str = " " +  (mLine+1);
+//        tv.setText(str);
     }
 
     private void setCurTestView(double cur, TextView view) {
         String str;
         if(cur >= 0)
-            str = cur + "A";
+            str = cur + "";
         else
             str = "---";
         view.setText(str);

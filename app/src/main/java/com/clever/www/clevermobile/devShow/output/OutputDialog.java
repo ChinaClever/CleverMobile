@@ -43,20 +43,22 @@ public class OutputDialog extends LinearLayout{
         idTv.setText(str);
 
         TextView nameTv = (TextView) findViewById(R.id.name);
-        idTv.setText(mOutput.getName());
+        nameTv.setText(mOutput.getName());
 
         TextView curTv = (TextView) findViewById(R.id.cur);
         TextView statusTv = (TextView) findViewById(R.id.status);
         boolean alarm = mOutput.getCurAlarm();
         boolean crAlarm = mOutput.getCrAlarm();
         if(alarm || crAlarm) {
-            if(alarm)
+            if(alarm) {
                 statusTv.setText(R.string.output_alarm);
-            else if(crAlarm)
+                curTv.setTextColor(Color.RED);
+            } else if(crAlarm) {
                 statusTv.setText(R.string.output_cr_alarm);
-
+                curTv.setTextColor(Color.YELLOW);
+            }
             statusTv.setTextColor(Color.rgb(255, 0, 0));
-            curTv.setTextColor(Color.rgb(255, 0, 0));
+
         } else {
             statusTv.setText(R.string.output_cr_ok);
             statusTv.setTextColor(Color.rgb(0, 0, 0));

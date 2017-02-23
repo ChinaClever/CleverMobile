@@ -25,7 +25,7 @@
     <string name="login_please">请登陆</string>
     <string name="login_coned">已登陆</string>
 
-    <string name="btmenu_line">相</string>
+    <string name="btmenu_line">设备状态</string>
     <string name="btmenu_output">输出位</string>
     <string name="btmenu_env">传感器</string>
     <string name="btmenu_setting">设置</string>
@@ -135,6 +135,14 @@
     <string name="output_unified">统一设置</string>
     <string name="output_whole">全局设置</string>
 
+    <string name="output_dlg_number">编号:</string>
+    <string name="output_dlg_name">名称:</string>
+    <string name="output_dlg_swstate">开关:</string>
+    <string name="output_dlg_cur">电流:</string>
+    <string name="output_dlg_pow">功率:</string>
+    <string name="output_dlg_ele">电能:</string>
+    <string name="output_dlg_status">状态:</string>
+
     <string name="output_ret_max">最大值大于16A</string>
     <string name="output_ret_min">最小值大于最大值</string>
     <string name="output_ret_crMin">临界下限小于最小值</string>
@@ -152,10 +160,12 @@
     <string name="status_alarm">报警</string>
     <string name="status_offLine">离线</string>
 
-    <string name="set_dev_name">设备名称</string>
+    <string name="set_dev_info"> 设备基本信息</string>
+    <string name="set_dev_maintain"> 设备维护</string>
+    <string name="set_dev_name">设备名称:</string>
     <string name="set_name_null">设备名为空，请重新输入！</string>
-    <string name="set_dev_usr">账号</string>
-    <string name="set_dev_pwd">密码</string>
+    <string name="set_dev_usr"> 设备账号:</string>
+    <string name="set_dev_pwd"> 设备密码:</string>
     <string name="set_usr_null">账户不能为空!</string>
     <string name="set_pwd_null">密码不能为空!</string>
 

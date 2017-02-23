@@ -104,7 +104,7 @@ public class EnvFragment extends Fragment implements AdapterView.OnItemClickList
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        if((mDataPacket == null) || (i==0))
+        if((mDataPacket == null) || (i==0) || (mDataPacket.offLine > 0))
             return;
 
         EnvItem env = mEnvList.get(--i);

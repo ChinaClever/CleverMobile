@@ -39,7 +39,16 @@ public class EnvSetDlg extends LinearLayout{
         mRate = rate;
 
         TextView tv = (TextView) findViewById(R.id.title);
-        tv.setText(title);
+        tv.setText(title + ":");
+
+        tv = (TextView) findViewById(R.id.sig);
+        tv.setText(mSymbol);
+
+        tv = (TextView) findViewById(R.id.minsig);
+        tv.setText(mSymbol);
+
+        tv = (TextView) findViewById(R.id.maxsig);
+        tv.setText(mSymbol);
 
         if(mDataUnit !=null) {
             updateValue();
@@ -50,7 +59,7 @@ public class EnvSetDlg extends LinearLayout{
     private void setView(TextView tv, int value) {
         String str = "---";
         if(value >= 0)
-            str = value/mRate + mSymbol;
+            str = value/mRate + "";
         tv.setText(str);
     }
 

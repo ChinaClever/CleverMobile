@@ -6,6 +6,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -13,9 +14,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_number"/>
+                android:text="@string/output_dlg_name"/>
             <TextView
-                android:id="@+id/id"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -27,9 +28,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_name"/>
+                android:text="@string/output_dlg_number"/>
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -45,7 +46,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_sw"/>
+                android:text="@string/output_dlg_swstate"/>
             <TextView
                 android:id="@+id/sw"
                 android:layout_width="wrap_content"
@@ -59,7 +60,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_status"/>
+                android:text="@string/output_dlg_status"/>
             <TextView
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
@@ -77,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_cur"/>
+                android:text="@string/output_dlg_cur"/>
             <TextView
                 android:id="@+id/cur"
                 android:layout_width="wrap_content"
@@ -92,7 +93,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_pow"/>
+                android:text="@string/output_dlg_pow"/>
             <TextView
                 android:id="@+id/pow"
                 android:layout_width="wrap_content"
@@ -111,7 +112,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_ele"/>
+                android:text="@string/output_dlg_ele"/>
             <TextView
                 android:id="@+id/ele"
                 android:layout_width="wrap_content"
@@ -160,9 +161,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_max"/>
+                android:text="@string/output_crMin"/>
             <TextView
-                android:id="@+id/max"
+                android:id="@+id/crMin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="---"/>
@@ -172,6 +173,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -179,14 +181,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/output_crMin"/>
+                android:text="@string/output_max"/>
             <TextView
-                android:id="@+id/crMin"
+                android:id="@+id/max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="---"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
