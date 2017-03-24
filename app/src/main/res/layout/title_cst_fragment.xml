@@ -8,13 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/status"
+        <Button
+            android:id="@+id/loginBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:text=" CleverMobile"
-            android:textSize="15sp"/>
+            android:text="@string/title_login"/>
 
         <TextView
             android:id="@+id/title"
@@ -24,12 +22,6 @@
             android:gravity="center"
             android:text="luozhiyong"
             android:textColor="@color/title_text_topbar"/>
-
-        <Button
-            android:id="@+id/loginBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/title_login"/>
 
     </LinearLayout>
 

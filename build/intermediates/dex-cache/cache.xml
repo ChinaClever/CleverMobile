@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="de29f34f9632036ca531ed004120ba49a4fde93e">
+        sha1="c77f7b3dc3a4fb5805fa92ce027e0bcda5d89389">
         <dex dex="/home/lzy/AndroidStudioProjects/CleverMobile/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_4ba879354716e81cb71f3fdebc06f6332940537a.jar" />
     </item>
     <item

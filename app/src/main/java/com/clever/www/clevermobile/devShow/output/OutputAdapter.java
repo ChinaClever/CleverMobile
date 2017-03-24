@@ -87,6 +87,7 @@ public class OutputAdapter extends ArrayAdapter<Output> {
         View view;
         if(convertView == null) { //如果为空，就用LayoutInflater加载布局
             view = LayoutInflater.from(getContext()).inflate(mResourceId, null); // 加载传入的布局
+//            if(position % 2 == 0) view.setBackgroundColor(Color.rgb(242,242,242));
         } else { // 不为空则直接对convertView进行重用
             view = convertView;
         }

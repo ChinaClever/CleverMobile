@@ -15,7 +15,7 @@
     <string name="login_select">设备选择</string>
     <string name="login_login">连接</string>
     <string name="login_disconnect">断开</string>
-    <string name="login_quit">退出</string>
+    <string name="login_quit">返回</string>
     <string name="login_wait">请等待</string>
     <string name="login_connecting">正在链接</string>
     <string name="login_ip_err">IP地址错误</string>
