@@ -167,6 +167,7 @@ public class LineListFragment extends Fragment implements AdapterView.OnItemClic
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 setDialog(line);
+                                mChNum = 0;
                             }
                         }).setNegativeButton(R.string.line_quit, new DialogInterface.OnClickListener() {
                             @Override

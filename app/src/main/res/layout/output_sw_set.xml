@@ -21,4 +21,21 @@
             android:layout_height="wrap_content"
             android:text="@string/loop_close"/>
     </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/unifiedBox"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/output_unified"/>
+        <CheckBox
+            android:id="@+id/wholeBox"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/output_whole"/>
+    </LinearLayout>
 </LinearLayout>

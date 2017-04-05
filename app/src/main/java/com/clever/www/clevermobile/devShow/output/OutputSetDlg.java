@@ -57,7 +57,7 @@ public class OutputSetDlg extends LinearLayout{
         TextView tv = (TextView) findViewById(R.id.name);
         String name = mDataPacket.output.name.get(mLine);
         if(name == null)
-            name = "Output" + (mLine+1);
+            name = "Output " + (mLine+1);
         tv.setText(name);
 
 //        tv = (TextView) findViewById(R.id.num);
@@ -222,9 +222,9 @@ public class OutputSetDlg extends LinearLayout{
      * @return -1 值为空
      */
     private int getEtView(EditText tv) {
-        int data = -1;
+        int data = 0;
         String str = tv.getText().toString();
-        if (str != null && str.length() > 0) {
+        if ((str != null) && (str.length() > 0)) {
 
             str = str.replace("A","");
             str = str.replace("---","-1");
@@ -308,7 +308,7 @@ public class OutputSetDlg extends LinearLayout{
         String str = "";
         if(mDataPacket != null) {
             str = checkThreshold();
-            if (!str.isEmpty()) {
+            if (str.isEmpty()) {
                 saveThreshold();
             }
         }

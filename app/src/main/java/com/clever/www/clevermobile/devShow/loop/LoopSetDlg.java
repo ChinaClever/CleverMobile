@@ -199,9 +199,9 @@ public class LoopSetDlg extends LinearLayout{
      * @return -1 值为空
      */
     private int getEtView(EditText tv) {
-        int data = -1;
+        int data = 0;
         String str = tv.getText().toString();
-        if (str != null && str.length() > 0) {
+        if ((str != null) && (str.length() > 0)) {
 
             str = str.replace("A","");
             str = str.replace("---","-1");
@@ -283,7 +283,7 @@ public class LoopSetDlg extends LinearLayout{
         String str = "";
         if(mDataPacket != null) {
             str = checkThreshold();
-            if (!str.isEmpty()) {
+            if (str.isEmpty()) {
                 saveThreshold();
             }
         }

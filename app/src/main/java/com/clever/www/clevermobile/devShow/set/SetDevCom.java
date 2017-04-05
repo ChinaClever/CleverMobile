@@ -97,6 +97,17 @@ public class SetDevCom {
         if(mTcpSentListBuf.size() > 0) {
             byte[] buf = mTcpSentListBuf.get(0);
             TcpSingle.get().sent(buf, buf.length);
+
+            ///////====================
+            //// 特别说明，MPDU只能通过UDP的形式接收数据
+            String ip = TcpSingle.get().getServerIp().replaceAll("/","");
+            mUdpSend.sent(ip, 18750, buf, buf.length);
+
+
+//            mUdpSend.sent("192.168.1.100", 18750, buf, buf.length);
+//            Log.d("LZY", "setLine: " + ip);
+            /////////////////////////////////////////
+
             mTcpSentListBuf.remove(0);
         }
     }

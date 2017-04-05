@@ -3,6 +3,7 @@ package com.clever.www.clevermobile.devShow.line;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -149,9 +150,9 @@ public class LineSetDlg extends LinearLayout{
      * @return -1 值为空
      */
     private int getEtView(EditText tv) {
-        int data = -1;
+        int data = 0;
         String str = tv.getText().toString();
-        if (str != null && str.length() > 0) {
+        if ((str != null) && (str.length() > 0)) {
             str = str.replace(mSymbol,"");
             str = str.replace("---","-1");
 
@@ -214,7 +215,7 @@ public class LineSetDlg extends LinearLayout{
         String str = "";
         if(mDataUnit != null) {
             str = checkThreshold();
-            if (!str.isEmpty()) {
+            if (str.isEmpty()) {
                 saveThreshold();
 //            } else {
 //

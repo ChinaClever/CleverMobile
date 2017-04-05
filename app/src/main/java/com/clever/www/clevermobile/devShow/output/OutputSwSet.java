@@ -3,6 +3,7 @@ package com.clever.www.clevermobile.devShow.output;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
@@ -45,6 +46,26 @@ public class OutputSwSet extends LinearLayout implements RadioGroup.OnCheckedCha
         }
     }
 
+    /**
+     * 设置位数
+     * @return 0 统一设置
+     */
+    private byte getBit(int line) {
+        byte id = (byte) (line +1);
+        CheckBox box = (CheckBox) findViewById(R.id.unifiedBox);
+        if(box.isChecked())
+            id = 0;
+        return id;
+    }
+
+    /**
+     * 是否需要全局设置
+     * @return true
+     */
+    private boolean getWholeSet() {
+        CheckBox box = (CheckBox) findViewById(R.id.wholeBox);
+        return box.isChecked();
+    }
 
     private boolean setLoopSw(int id) {
         SetDevCom setDevCom = SetDevCom.get();
@@ -53,10 +74,10 @@ public class OutputSwSet extends LinearLayout implements RadioGroup.OnCheckedCha
 
         NetDataDomain pkt = new NetDataDomain();
         pkt.fn[0] = 13;
-        pkt.fn[1] = (byte) id;
+        pkt.fn[1] = getBit(id);
         pkt.len = setDevCom.intToByteList(list, pkt.data);
 
-        return setDevCom.setDevData(pkt, false);
+        return setDevCom.setDevData(pkt, getWholeSet());
     }
 
     public void setSwitch(int id) {
